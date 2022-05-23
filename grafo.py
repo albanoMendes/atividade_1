@@ -45,6 +45,13 @@ class Grafo:
 		'''Rótulo de um vértice {v}, caso esteja no grafo.'''
 		return self.vertices[v-1] if self.haVertice(v) else None
 
+	def valor(self,v):
+		'''recupera valor asociado a rótulo de vértice'''
+		for i in range(0,len(self.vertices)):
+			if self.vertices[i]==v:
+				return i
+		return None
+
 	def vizinhos(self, v):
 		'''
 		Conjunto de vizinhos de um vértice {v}, caso esteja no grafo.
