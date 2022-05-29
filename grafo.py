@@ -39,6 +39,9 @@ class Grafo:
 			grau_sainte = len(vizinhos[1])
 			return (grau_entrante, grau_sainte)
 		else:
+			
+			if len(vizinhos)== None:
+				return 0
 			return len(vizinhos)
 
 	def rotulo(self, v):
@@ -49,7 +52,7 @@ class Grafo:
 		'''recupera valor asociado a rótulo de vértice'''
 		for i in range(0,len(self.vertices)):
 			if self.vertices[i]==v:
-				return i
+				return i+1
 		return None
 
 	def vizinhos(self, v):
